@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="root"></div>
+    <script src="react.js"></script>
+    <script src="react-dom.js"></script>
+    <script>
+
+      let listItems = ['Beef','Chicken','Rice']
+        .map(food => React.createElement('li', null, food));  // array
+
+      let list = React.createElement('ul', null, listItems)
+
+      ReactDOM.createRoot(document.getElementById('root'))
+        .render(React.createElement('h1', null, "Recipe: ", list));
+
+    </script>
+  </body>
+</html>
